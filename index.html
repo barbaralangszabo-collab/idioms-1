@@ -911,7 +911,8 @@
 
             let imgBlock = '';
             if(activeCard.file) {
-                imgBlock = `<div class="image-container"><img src="${activeCard.file}" alt="${activeCard.phrase}" onerror="this.parentElement.innerHTML='<div class=\\'image-placeholder-text\\'>[Visual Asset Illustration: ${activeCard.phrase}]</div>'"></div>`;
+                /* MODIFIED: Fixed image directory prefix route path */
+                imgBlock = `<div class="image-container"><img src="images/${activeCard.file}" alt="${activeCard.phrase}" onerror="this.parentElement.innerHTML='<div class=\\'image-placeholder-text\\'>[Visual Asset Illustration: ${activeCard.phrase}]</div>'"></div>`;
             } else {
                 imgBlock = `<div class="image-container"><div class="image-placeholder-text">[Visual Asset Frame: ${activeCard.phrase}]</div></div>`;
             }
